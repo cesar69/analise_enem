@@ -124,7 +124,7 @@ if st.button('Não exibir gráfico', type='secondary'):
 
 # Vendo as notas por esporte escolhido pelo usuário em um segmented_control
 st.subheader('Notas por Esporte Preferido')
-esporte_selecionado = st.segmented_control('Selecione o esporte:', df['ESPORTE_PREFERIDO'].unique(), selection_mode='single', default=df['ESPORTE_PREFERIDO'].unique()[0])
+esporte_selecionado = st.selectbox('Selecione o esporte:', df['ESPORTE_PREFERIDO'].unique(), key='esporte')
 # Selecionando o sexo e a disciplina
 disciplina_selecionada2 = st.selectbox('Selecione a disciplina:', colunas_numericas[1:5], key='disciplina2')
 
