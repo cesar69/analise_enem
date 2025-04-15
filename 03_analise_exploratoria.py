@@ -109,7 +109,7 @@ if st.button('Gerar Gráfico', type='primary'):
         # Plotando o histograma para a cor e disciplina selecionadas
         df_cor = df[df['COR'] == cor_selecionada]
         plt.figure(figsize=(10, 5))
-        sns.histplot(df_cor[disciplina_selecionada], hue = df_cor[disciplina_selecionada], bins=num_bins, kde=True, color='blue')
+        sns.histplot(df_cor[disciplina_selecionada], bins=num_bins, kde=True, color='blue')
         plt.title(f'Distribuição de {disciplina_selecionada} para {cor_selecionada}', fontsize=16)
         plt.xlabel(disciplina_selecionada, fontsize=14)
         plt.ylabel('Frequência', fontsize=14)
